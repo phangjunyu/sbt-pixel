@@ -6,7 +6,7 @@ import {
   Page,
   SkeletonBodyText,
 } from "@shopify/polaris";
-import { QRCodeIndex, AccountConnect } from "../components";
+import { QRCodeIndex, AccountConnect, CustomerWalletToggle } from "../components";
 
 export default function HomePage() {
 
@@ -64,6 +64,15 @@ export default function HomePage() {
         </AccountConnect>
       </Card>
     ) : null;
+
+    const customerWalletToggle = 
+    !isLoading && !QRCodes?.length ? (
+      <Card sectioned>
+        <CustomerWalletToggle>
+          
+        </CustomerWalletToggle>
+      </Card>
+    ) : null;
   /*
     Use Polaris Page and TitleBar components to create the page layout,
     and include the empty state contents set above.
@@ -87,6 +96,7 @@ export default function HomePage() {
           {/* {qrCodesMarkup}
           {emptyStateMarkup} */}
           {accountConnect}
+          {customerWalletToggle}
         </Layout.Section>
       </Layout>
     </Page>

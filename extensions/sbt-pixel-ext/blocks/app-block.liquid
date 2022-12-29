@@ -1,0 +1,25 @@
+<hr>
+<div id="section-cta">
+  <button type="button" onclick=onClick()>{{block.settings.linktext}}</button>
+</div>
+
+
+
+{% render "app_snippet" %}
+{% schema %}
+{
+  "name": "Call to action",
+  "target": "section",
+  "stylesheet": "app.css",
+  "javascript": "app.js",
+  "settings": [
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Link text",
+      "default": "Connect Wallet"
+    }
+  ]
+  
+}
+{% endschema %}

@@ -35,7 +35,7 @@ export function AccountConnect() {
     <AccountConnection
       accountName={accountName}
       connected={connected}
-      title="Web3 Wallet Connect"
+      title="Connect Merchant Wallet"
       action={{
         content: buttonText,
         onAction: handleAction,
